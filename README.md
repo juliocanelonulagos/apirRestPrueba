@@ -1,4 +1,4 @@
-# apirRestPrueba
+# apiRestPrueba
 Swagger que describe ApiRest de prueba
 
 En este proyecto encontraras el postman Collection para probar el apirest y ademas tendras el arechivo con la definicion del swagger
