@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "a1158fb9-3458-47c5-81f4-1d017f9ca0df",
+		"name": "Prueba API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7509781",
+		"_collection_link": "https://universal-zodiac-591287.postman.co/workspace/DevelopAI~5692f054-79ef-4f2d-b734-5d7a6dc7acf0/collection/7509781-a1158fb9-3458-47c5-81f4-1d017f9ca0df?action=share&source=collection_link&creator=7509781"
+	},
+	"item": [
+		{
+			"name": "Obtener usuario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://52.13.20.157:3000/user/2",
+					"protocol": "http",
+					"host": [
+						"52",
+						"13",
+						"20",
+						"157"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://52.13.20.157:3000/users?start=2&limit=10",
+					"protocol": "http",
+					"host": [
+						"52",
+						"13",
+						"20",
+						"157"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Añadir un usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Julio Canelon\",\r\n    \"descripcion\":\"Profesor universitario\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://52.13.20.157:3000/user",
+					"protocol": "http",
+					"host": [
+						"52",
+						"13",
+						"20",
+						"157"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar un usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Juan Pérez\",\r\n    \"descripcion\":\"Aficionado a la tecnología y la astronomíaX\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://52.13.20.157:3000/user/2",
+					"protocol": "http",
+					"host": [
+						"52",
+						"13",
+						"20",
+						"157"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar usuario Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://52.13.20.157:3000/user/2",
+					"protocol": "http",
+					"host": [
+						"52",
+						"13",
+						"20",
+						"157"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "apiKey",
+			"value": "123e4567-e89b-12d3-a456-426614174000"
+		}
+	]
+}
