@@ -1,0 +1,116 @@
+openapi: 3.0.0
+info:
+  title: API de Usuarios
+  description: API REST para la gestión de usuarios.
+  version: "1.0.0"
+servers:
+  - url: http://52.13.20.157:3000
+    description: Servidor de desarrollo
+
+paths:
+  /user:
+    post:
+      summary: Agrega un nuevo usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                descripcion:
+                  type: string
+      responses:
+        "200":
+          description: Usuario creado exitosamente
+
+  /user/{id}:
+    get:
+      summary: Obtiene un usuario por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Detalles del usuario
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  nombre:
+                    type: string
+                  descripcion:
+                    type: string
+    put:
+      summary: Actualiza un usuario existente
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                descripcion:
+                  type: string
+      responses:
+        "200":
+          description: Usuario actualizado correctamente
+
+    delete:
+      summary: Elimina un usuario
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Usuario eliminado correctamente
+
+  /users:
+    get:
+      summary: Lista paginada de usuarios
+      parameters:
+        - name: start
+          in: query
+          schema:
+            type: integer
+          description: Índice de inicio para la paginación
+        - name: limit
+          in: query
+          schema:
+            type: integer
+          description: Cantidad de usuarios a retornar
+      responses:
+        "200":
+          description: Lista de usuarios
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    nombre:
+                      type: string
+                    descripcion:
+                      type: string
