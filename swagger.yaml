@@ -7,6 +7,16 @@ servers:
   - url: http://52.13.20.157:3000
     description: Servidor de desarrollo
 
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+
+security:
+  - ApiKeyAuth: []
+
 paths:
   /user:
     post:
@@ -25,6 +35,8 @@ paths:
       responses:
         "200":
           description: Usuario creado exitosamente
+      security:
+        - ApiKeyAuth: []
 
   /user/{id}:
     get:
@@ -49,6 +61,8 @@ paths:
                     type: string
                   descripcion:
                     type: string
+      security:
+        - ApiKeyAuth: []
     put:
       summary: Actualiza un usuario existente
       parameters:
@@ -71,7 +85,8 @@ paths:
       responses:
         "200":
           description: Usuario actualizado correctamente
-
+      security:
+        - ApiKeyAuth: []
     delete:
       summary: Elimina un usuario
       parameters:
@@ -83,6 +98,8 @@ paths:
       responses:
         "200":
           description: Usuario eliminado correctamente
+      security:
+        - ApiKeyAuth: []
 
   /users:
     get:
@@ -114,3 +131,5 @@ paths:
                       type: string
                     descripcion:
                       type: string
+      security:
+        - ApiKeyAuth: []
