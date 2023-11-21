@@ -14,13 +14,13 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "{{apiKey}}",
+						"value": "123e4567-e89b-12d3-a456-426614174000",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "http://52.13.20.157:3000/user/2",
-					"protocol": "http",
+					"raw": "https://52.13.20.157:3000/user/1",
+					"protocol": "https",
 					"host": [
 						"52",
 						"13",
@@ -30,11 +30,75 @@
 					"port": "3000",
 					"path": [
 						"user",
-						"2"
+						"1"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Obtener usuario",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "123e4567-e89b-12d3-a456-426614174000",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://52.13.20.157:3000/user/1",
+							"protocol": "https",
+							"host": [
+								"52",
+								"13",
+								"20",
+								"157"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"72-oWWbwbtrOpRhUwGRo0NCPtA4Vfs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Nov 2023 00:02:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Éxito\",\n    \"data\": {\n        \"id\": 1,\n        \"nombre\": \"Ana López\",\n        \"descripcion\": \"Amante de la naturaleza y el senderismo\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Obtener usuarios",
@@ -48,8 +112,8 @@
 					}
 				],
 				"url": {
-					"raw": "http://52.13.20.157:3000/users?start=2&limit=10",
-					"protocol": "http",
+					"raw": "https://52.13.20.157:3000/users?start=2&limit=10",
+					"protocol": "https",
 					"host": [
 						"52",
 						"13",
@@ -72,7 +136,80 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Obtener usuarios",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://52.13.20.157:3000/users?start=2&limit=10",
+							"protocol": "https",
+							"host": [
+								"52",
+								"13",
+								"20",
+								"157"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "798"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31e-Fcz3FhP4pF0eZwX8YaoF7cXjLEs\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Nov 2023 00:02:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Éxito\",\n    \"data\": [\n        {\n            \"id\": 4,\n            \"nombre\": \"Eduardo Gómez\",\n            \"descripcion\": \"Entusiasta del deporte y la vida saludable\"\n        },\n        {\n            \"id\": 5,\n            \"nombre\": \"Fernanda Castillo\",\n            \"descripcion\": \"Experta en cocina internacional\"\n        },\n        {\n            \"id\": 6,\n            \"nombre\": \"Gustavo Morales\",\n            \"descripcion\": \"Músico y compositor\"\n        },\n        {\n            \"id\": 7,\n            \"nombre\": \"Helena Sánchez\",\n            \"descripcion\": \"Fanática de los libros y la lectura\"\n        },\n        {\n            \"id\": 8,\n            \"nombre\": \"Iván Torres\",\n            \"descripcion\": \"Cineasta y guionista\"\n        },\n        {\n            \"id\": 9,\n            \"nombre\": \"Julia Navarro\",\n            \"descripcion\": \"Bióloga marina y defensora del medio ambiente\"\n        },\n        {\n            \"id\": 10,\n            \"nombre\": \"Kevin Martínez\",\n            \"descripcion\": \"Ingeniero y amante de los rompecabezas\"\n        },\n        {\n            \"id\": 11,\n            \"nombre\": \"Juan Pérez\",\n            \"descripcion\": \"Aficionado a la tecnología y la astronomía\"\n        },\n        {\n            \"id\": 12,\n            \"nombre\": \"Julio Canelon\",\n            \"descripcion\": \"Profesor universitario\"\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "Añadir un usuario",
@@ -95,8 +232,8 @@
 					}
 				},
 				"url": {
-					"raw": "http://52.13.20.157:3000/user",
-					"protocol": "http",
+					"raw": "https://52.13.20.157:3000/user",
+					"protocol": "https",
 					"host": [
 						"52",
 						"13",
@@ -109,7 +246,79 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Añadir un usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Julio Canelon\",\r\n    \"descripcion\":\"Profesor universitario\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://52.13.20.157:3000/user",
+							"protocol": "https",
+							"host": [
+								"52",
+								"13",
+								"20",
+								"157"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-J6Xq81bOcYflQW7smtlSRnDSM+8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Nov 2023 00:02:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Usuario añadido exitosamente\",\n    \"data\": {\n        \"id\": 13\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Editar un usuario",
@@ -132,8 +341,8 @@
 					}
 				},
 				"url": {
-					"raw": "http://52.13.20.157:3000/user/2",
-					"protocol": "http",
+					"raw": "https://52.13.20.157:3000/user/2",
+					"protocol": "https",
 					"host": [
 						"52",
 						"13",
@@ -147,7 +356,80 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Editar un usuario",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Juan Pérez\",\r\n    \"descripcion\":\"Aficionado a la tecnología y la astronomíaX\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://52.13.20.157:3000/user/2",
+							"protocol": "https",
+							"host": [
+								"52",
+								"13",
+								"20",
+								"157"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"33-tbR8zw3OccMiyIDQRO+1oMLWqlg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Nov 2023 00:03:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Usuario Actualizado\",\n    \"data\": {\n        \"id\": \"2\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Eliminar usuario Copy",
@@ -161,8 +443,8 @@
 					}
 				],
 				"url": {
-					"raw": "http://52.13.20.157:3000/user/2",
-					"protocol": "http",
+					"raw": "https://52.13.20.157:3000/user/2",
+					"protocol": "https",
 					"host": [
 						"52",
 						"13",
@@ -176,7 +458,91 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Eliminar usuario Copy",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://52.13.20.157:3000/user/2",
+							"protocol": "https",
+							"host": [
+								"52",
+								"13",
+								"20",
+								"157"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-WqQEu3Nq5KUGWZTSg1GapENuOMg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Nov 2023 00:03:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Usuario Eliminado\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [
