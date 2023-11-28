@@ -14,23 +14,21 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "123e4567-e89b-12d3-a456-426614174000",
+						"value": "{{apiKey}}",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "https://52.13.20.157:3000/user/1",
+					"raw": "https://apirest.servery2k.link/user/19",
 					"protocol": "https",
 					"host": [
-						"52",
-						"13",
-						"20",
-						"157"
+						"apirest",
+						"servery2k",
+						"link"
 					],
-					"port": "3000",
 					"path": [
 						"user",
-						"1"
+						"19"
 					]
 				}
 			},
@@ -112,22 +110,20 @@
 					}
 				],
 				"url": {
-					"raw": "https://52.13.20.157:3000/users?start=2&limit=10",
-					"protocol": "https",
+					"raw": "http://apirest.servery2k.link/users?start=1&limit=10",
+					"protocol": "http",
 					"host": [
-						"52",
-						"13",
-						"20",
-						"157"
+						"apirest",
+						"servery2k",
+						"link"
 					],
-					"port": "3000",
 					"path": [
 						"users"
 					],
 					"query": [
 						{
 							"key": "start",
-							"value": "2"
+							"value": "1"
 						},
 						{
 							"key": "limit",
@@ -224,7 +220,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"Julio Canelon\",\r\n    \"descripcion\":\"Profesor universitario\"\r\n} ",
+					"raw": "{\r\n    \"nombre\": \"Juan Pérez\",\r\n    \"descripcion\": \"Aficionado a la tecnología y la astronomía\"\r\n} ",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -232,15 +228,13 @@
 					}
 				},
 				"url": {
-					"raw": "https://52.13.20.157:3000/user",
+					"raw": "https://apirest.servery2k.link/user",
 					"protocol": "https",
 					"host": [
-						"52",
-						"13",
-						"20",
-						"157"
+						"apirest",
+						"servery2k",
+						"link"
 					],
-					"port": "3000",
 					"path": [
 						"user"
 					]
@@ -341,18 +335,16 @@
 					}
 				},
 				"url": {
-					"raw": "https://52.13.20.157:3000/user/2",
+					"raw": "https://apirest.servery2k.link/user/19",
 					"protocol": "https",
 					"host": [
-						"52",
-						"13",
-						"20",
-						"157"
+						"apirest",
+						"servery2k",
+						"link"
 					],
-					"port": "3000",
 					"path": [
 						"user",
-						"2"
+						"19"
 					]
 				}
 			},
@@ -443,18 +435,16 @@
 					}
 				],
 				"url": {
-					"raw": "https://52.13.20.157:3000/user/2",
+					"raw": "https://apirest.servery2k.link/user/19",
 					"protocol": "https",
 					"host": [
-						"52",
-						"13",
-						"20",
-						"157"
+						"apirest",
+						"servery2k",
+						"link"
 					],
-					"port": "3000",
 					"path": [
 						"user",
-						"2"
+						"19"
 					]
 				}
 			},
